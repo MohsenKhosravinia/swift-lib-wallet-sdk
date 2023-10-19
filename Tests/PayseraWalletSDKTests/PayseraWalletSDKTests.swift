@@ -696,7 +696,7 @@ class PayseraWalletSDKTests: XCTestCase {
         let filter = PSIdentificationRequestsFilter()
         
         client
-            .getIdentificationRequests(filter: filter)
+            .getIdentificationRequests(filter: filter, locale: "en")
             .done { response = $0 }
             .catch { error in XCTFail(error.localizedDescription) }
             .finally { expectation.fulfill() }
@@ -1440,7 +1440,7 @@ class PayseraWalletSDKTests: XCTestCase {
         let expectation = XCTestExpectation(description: "PSEasyPayTransfer items must exist")
         var response: PSMetadataAwareResponse<PSEasyPayTransfer>?
         let filter = PSEasyPayTransferFilter()
-        let seenIDs = [] // insert IDs here
+        let seenIDs: [Int] = [] // insert IDs here
 
         client
             .markEasyPayTransfersAsSeen(transferIDs: seenIDs)

@@ -17,7 +17,7 @@ let package = Package(
         .package(
             name: "PayseraAccountsSDK",
             url: "https://github.com/paysera/swift-lib-accounts-sdk",
-            from: "8.9.0"
+            from: "9.0.0"
         ),
         .package(
             url: "https://github.com/krzyzanowskim/CryptoSwift",
