@@ -1439,7 +1439,6 @@ class PayseraWalletSDKTests: XCTestCase {
     func testMarkEasyPayTransferAsSeen() {
         let expectation = XCTestExpectation(description: "PSEasyPayTransfer items must exist")
         var response: PSMetadataAwareResponse<PSEasyPayTransfer>?
-        let filter = PSEasyPayTransferFilter()
         let seenIDs: [Int] = [] // insert IDs here
 
         client
